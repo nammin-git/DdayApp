@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DdayApp">
         <activity
+            android:name=".DatePickerSplashActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyAccountActivity"
             android:exported="false" />
         <activity

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import com.mgprogect.d_dayapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,18 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MyAccountActivity::class.java)
             startActivity(intent)
         }
+
+
+        //날짜 선택하기 버튼 클릭 시 동작
+        val deadlineDateBtn = findViewById<TextView>(R.id.deadline_date)
+
+        deadlineDateBtn.setOnClickListener{
+            //누르면 Splash 창으로 연결
+            val intent = Intent(this, DatePickerSplashActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
     }
 }
