@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //날짜 선택하기 버튼 클릭 시 동작
-        val deadlineDateBtn = findViewById<TextView>(R.id.deadline_date)
+        val deadlineDateBtn = findViewById<TextView>(R.id.dday_date)
 
         deadlineDateBtn.setOnClickListener{
             //누르면 Splash 창으로 연결
