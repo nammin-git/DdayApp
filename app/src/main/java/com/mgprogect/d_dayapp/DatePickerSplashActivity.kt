@@ -24,22 +24,20 @@ class DatePickerSplashActivity : AppCompatActivity() {
         val mAlertDialog = mBuilder.show()
 
         //날짜를 선택할 수 있는 다이얼로그 만들기
+        val calendar = Calendar.getInstance()
+        var targetYear = calendar.get(Calendar.YEAR)
+        var targetMonth = calendar.get(Calendar.MONTH)
+        var targetDate = calendar.get(Calendar.DAY_OF_MONTH)
+
         val dateSelectBtn = findViewById<TextView>(R.id.dday_date)
 
         dateSelectBtn?.setOnClickListener {
 
-            val calendar = Calendar.getInstance()
-            var targetYear : Int = calendar.get(Calendar.YEAR)
-            var targetMonth : Int = calendar.get(Calendar.MONTH)
-            var targetDate : Int = calendar.get(Calendar.DATE)
-
-            val dateSetListener = DatePickerDialog.OnDateSetListener { view: DatePicker?, year: Int, month: Int, dayOfMonth: Int ->
-                Log.d("Main", "${year}, ${month+1}, ${dayOfMonth}")
+            val datePickerDialog = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view: DatePicker?, year: Int, month: Int, dayOfMonth: Int ->
                 dateSelectBtn.text = "${year}년 ${month+1}월 ${dayOfMonth}일"
-            }
+            }, targetYear, targetMonth, targetDate)
 
-            DatePickerDialog(this, dateSetListener, targetYear, targetMonth, targetDate).show()
-
+            datePickerDialog.show()
         }
 
     }
