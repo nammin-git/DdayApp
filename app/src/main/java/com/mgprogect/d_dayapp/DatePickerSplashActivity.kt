@@ -8,12 +8,16 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.widget.DatePicker
 import android.widget.TextView
+import com.mgprogect.d_dayapp.databinding.CustomDialogBinding
 import java.util.*
 
 class DatePickerSplashActivity : AppCompatActivity() {
+
+    val binding by lazy { CustomDialogBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         //dialog를 띄우는 코드
         val mDialogView = LayoutInflater.from(this).inflate(R.layout.custom_dialog, null)

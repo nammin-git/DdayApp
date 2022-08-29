@@ -10,9 +10,11 @@ import com.mgprogect.d_dayapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         //header 의 버튼 클릭 시 동작
         val plusListBtn = findViewById<ImageButton>(R.id.plus_list_btn)
@@ -31,9 +33,9 @@ class MainActivity : AppCompatActivity() {
 
 
         //날짜 선택하기 버튼 클릭 시 동작
-        val deadlineDateBtn = findViewById<TextView>(R.id.dday_date)
+        val selectDateBtn = findViewById<TextView>(R.id.dday_date)
 
-        deadlineDateBtn.setOnClickListener{
+        selectDateBtn.setOnClickListener{
             //누르면 Splash 창으로 연결
             val intent = Intent(this, DatePickerSplashActivity::class.java)
             startActivity(intent)
