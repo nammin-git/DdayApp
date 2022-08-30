@@ -3,14 +3,13 @@ package com.mgprogect.d_dayapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import com.mgprogect.d_dayapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

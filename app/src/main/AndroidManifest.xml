@@ -11,6 +11,7 @@
         android:theme="@style/Theme.DdayApp">
         <activity
             android:name=".DatePickerSplashActivity"
+            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".MyAccountActivity"
