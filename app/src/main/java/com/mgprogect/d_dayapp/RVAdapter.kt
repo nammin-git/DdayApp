@@ -23,9 +23,12 @@ class RVAdapter(val items : MutableList<String>) : RecyclerView.Adapter<RVAdapte
 
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        fun bindItems(item : String) {
-            val rv_text = itemView.findViewById<TextView>(R.id.rvTextId)
-            rv_text.text = item
+        fun bindItems(item : DataModel) {
+            val rv_goal = itemView.findViewById<TextView>(R.id.rvTextId)
+            val rv_date = itemView.findViewById<TextView>(R.id.rvTextId)
+
+            rv_goal.text = item.goal
+            rv_date.text = item.date
         }
     }
 }
