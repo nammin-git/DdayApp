@@ -32,15 +32,11 @@ class MainActivity : AppCompatActivity() {
 
 
         //날짜 선택하기 버튼 클릭 시 동작
-        val selectDateBtn = findViewById<TextView>(R.id.dday_date)
-
-        selectDateBtn.setOnClickListener{
-            //누르면 Splash 창으로 연결
+        val selectDateBtn = findViewById<TextView>(R.id.rv_date)
+        selectDateBtn?.setOnClickListener {
             val intent = Intent(this, DatePickerSplashActivity::class.java)
             startActivity(intent)
         }
-
-
 
     }
 }
