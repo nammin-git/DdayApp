@@ -22,7 +22,7 @@ class DatePickerSplashActivity : AppCompatActivity() {
 
         val rvDate = findViewById<TextView>(R.id.rv_date)
 
-         val datePickerDialog = DatePickerDialog(this, object : DatePickerDialog.OnDateSetListener {
+        val datePickerDialog = DatePickerDialog(this, object : DatePickerDialog.OnDateSetListener {
              override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
                  Log.d("DatePickerSplash", "${year}, ${month+1}, ${dayOfMonth}")
                  rvDate.text = "${year}, ${month+1}, ${dayOfMonth}"
